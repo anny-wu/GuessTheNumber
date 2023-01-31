@@ -89,12 +89,16 @@ class ViewController: UIViewController {
         button.backgroundColor = UIColor.systemOrange
         button.setTitle("Guess!", for: .normal)
         numberG = 0
+        generateRandomNumber()
     }
     
     //Alert the number of guess
     func alert() {
         if numberG > 1{
             m = "\(numberG) guesses"
+        }
+        else{
+            m = "1 guess"
         }
         let alert = UIAlertController(title: "You have used", message: m, preferredStyle: UIAlertController.Style.alert)
 
